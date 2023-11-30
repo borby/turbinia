@@ -827,7 +827,7 @@ def process_args(args):
     except TurbiniaException as exception:
       log.error(f'Failed to pull the data {exception!s}')
   else:
-    log.warning(f'Command {args.command!s} not implemented.')
+    parser.print_help(sys.stderr)
 
 
 # TODO: shard this function and move some of its functionalities to other files
